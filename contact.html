@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>REGISTER</title>
+	<title>CONTACT</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/home.css">
 	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 <div id="wrapper">
@@ -39,8 +40,8 @@
 						<li><a href="#">About</a></li>
 						<li><a href="news-page.html">News</a></li>
 						<li><a href="#">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li class="active"><a href="#">Register</a></li>
+						<li class="active"><a href="#">Contact</a></li>
+						<li><a href="register_form.html">Register</a></li>
 						<li><a href="login_form.html">Login</a></li>
 					</ul>
 				</div>
@@ -62,42 +63,41 @@
 			</div>
 			<div class="clearfix"></div>
 			<div class="main-content container">
-				<form id="signupForm" method="post" class="form-horizontal" action="">
+				<form id="contactForm" method="post" class="form-horizontal" action="">
 				<div class="form-group">
-					<br/>
-					<label class="col-lg-2" for="firstname">First name</label>
+					<label class="col-lg-2" for="aid">Tuition aid expectation:</label>
 					<div class="col-lg-5">
-						<input type="text" id="firstname" class="form-control"name="firstname" placeholder="First name" /><br/>
+						<!-- <input type="text" id="aid" class="form-control" name="aid" placeholder="aid" /><br/> -->
+						<label for="aidFrom" class="aidFrom col-lg-2">From: </label>
+						<input type="text" id="aidFrom" class="col-lg-2" name="aidFrom" placeholder="/year" />
+						<label for="usd" class="usd col-lg-2">USD</label>
+						<label for="aidTo" class="aidTo col-lg-2">To: </label>
+						<input type="text" id="aidTo" class=" col-lg-2" name="aidTo" placeholder="/year" />
+						<label for="usd" class="usd col-lg-2">USD</label>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-lg-2" for="lastname">Last name</label>
-					<div class="col-lg-5">
-						<input type="text" id="lastname" class="form-control"name="lastname" placeholder="last name" /><br/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-lg-2" for="email">Email</label>
+					<label class="col-lg-2" for="date">StartDate</label>
 					<div class="col-sm-5">
-						<input type="email" id="email" class="form-control" name="email" placeholder="Email" /><br/>
+						<input type="text" class="date form-control" name="date" placeholder="start date" /><br/>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-lg-2" for="pass">Password</label>
+					<label class="col-lg-2" for="date">Number Of Year</label>
 					<div class="col-sm-5">
-						<input type="password" id="pass" class="form-control" name="pass" placeholder="your password" /><br/>
+						<input type="text" class="date form-control" name="date" placeholder="Number of year" /><br/>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-lg-2" for="year">Year old</label>
+					<label class="col-lg-2" for="country">Country</label>
 					<div class="col-sm-5">
-						<input type="text" id="year" class="form-control" name="year" placeholder="year name" /><br/>
+						<input type="text"  class="form-control" id="country" name="country" placeholder="country" /><br/>
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="col-lg-2 control-label" style="text-align: left;">Phone number</label>
-					<div class="col-lg-5">
-					    <input type="tel" class="form-control" name="phoneNumber" placeholder="+841234567"/>
+					<div class="form-group">
+					<label class="col-lg-2" for="country">Your Opinions</label>
+					<div class="col-sm-5">
+						<textarea class="form-control" name="opinion"  cols="30" rows="10" placeholder="What you want to suggest or have question for us"></textarea>
 					</div>
 				</div>
 				<div class="checkbox">
@@ -209,5 +209,8 @@
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/form_validation.js"></script>
 	<script type="text/javascript" src="js/intlTelInput.min.js"></script>
+	<script>
+		$('.date').datepicker({dateFormat: 'dd-mm-yy'});
+	</script>		
 </body>
 </html>
