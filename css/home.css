@@ -215,6 +215,8 @@ body{
 .single-slider .carousel-caption {
 	padding-top: 50px;
 	top: 40%;
+	right: 10%;
+	left: auto;
 }
 .single-slider .carousel-caption h3 {
 	font-size: 50px;
