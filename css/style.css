@@ -98,7 +98,6 @@ a {
 
 .icon-box {
     padding-left: 12px;
-    padding-top: 30px;
 }
 .icon-box + .icon-box {
     margin-top: 44px;
@@ -129,10 +128,8 @@ a {
     overflow: hidden;
 }
 
-.o__hidden a {
-    font-size: 20px;
-    text-decoration: none;
-    font-family: 'nice', Arial, sans-serif;
+.o__hidden {
+    overflow: hidden;
 }
 h6 {
     font-size: 19px;
@@ -147,9 +144,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #303334;
 }
 /*---------------------------*/
-.news {
-    padding-top: 30px;
-}
 .views-field-title {
     color: #64797E !important;
     font-size: 2em;

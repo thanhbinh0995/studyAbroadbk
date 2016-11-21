@@ -1,15 +1,6 @@
-<?php $title = 'Home' ?>
-<?php
-include_once 'connect.php';
-if(!$user->is_loggedin())
-{
- 	$user->redirect('index.php');
-}
-$user_id = $_SESSION['user_session'];
-$stmt = $DB_con->prepare("SELECT * FROM user WHERE id=:user_id");
-$stmt->execute(array(":user_id"=>$user_id));
-$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
-?>
+
+<?php $title = 'Home'; ?>
+
 <?php include 'header.php'; ?>
 welcome : <?php print($userRow['user_name']); ?>
 	<section id="slider" class="slider">
@@ -21,7 +12,7 @@ welcome : <?php print($userRow['user_name']); ?>
 			    </ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active single-slider">
-					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive img-100">
+					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -31,7 +22,7 @@ welcome : <?php print($userRow['user_name']); ?>
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive img-100">
+					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -41,7 +32,7 @@ welcome : <?php print($userRow['user_name']); ?>
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive img-100">
+					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -61,6 +52,7 @@ welcome : <?php print($userRow['user_name']); ?>
 			</a>
 		</div>
 	</section>
+
 	<section class="spot">
 		<div class="container">
 			<div class="row">
@@ -139,61 +131,73 @@ welcome : <?php print($userRow['user_name']); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4">				
-		            <div class="icon-box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+		            <div class="icon-box box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-flag"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem ipsum dme consectetuer adipiscin.</p>
 		                </div>
 		            </div>
-		            <div class="icon-box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+		            <div class="icon-box box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-folder-open-o"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem consectetuer adipiscin.</p>
 		                </div>
 		            </div>         
 				</div>
 				<div class="col-lg-4 col-md-4">
-					<div class="icon-box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+					<div class="icon-box box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-flag"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem ipsum dme consectetuer adipiscin.</p>
 		                </div>
 		            </div>
-		            <div class="icon-box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+		            <div class="icon-box box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-folder-open-o"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem consectetuer adipiscin.</p>
 		                </div>
 		            </div>        
 				</div>
 				<div class="col-lg-4 col-md-4">
-					<div class="icon-box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+					<div class="icon-box box wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-flag"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem ipsum dme consectetuer adipiscin.</p>
 		                </div>
 		            </div>
-		            <div class="icon-box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+		            <div class="icon-box box wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 		                <div class="box_left">
 		                    <div class="icon fa fa-folder-open-o"></div>
 		                </div>
 		                <div class="box_cnt o__hidden">
-		                    <a href="#">Lorem ipsum dolor sit amet</a>
+		                    <h6>
+		                        <a href="#">Lorem ipsum dolor sit amet</a>
+		                    </h6>
 		                    <p class="let-spac">Bulum iaculis lacinia est. Proin dictum elemntum velit. Fusce euismod cons equat ante. Lorem consectetuer adipiscin.</p>
 		                </div>
 		            </div>        
@@ -310,4 +314,5 @@ welcome : <?php print($userRow['user_name']); ?>
 			</div>	
 		</div>
 	</section>
+
 	<?php include 'footer.php'; ?>

@@ -1,3 +1,4 @@
+
 <?php $title = 'News' ?>
 <?php include 'header.php'; ?>
 	<section id="main-content">
@@ -40,9 +41,9 @@
 				</div>
 				<div class="img-description">
 					<img src="img/new1.jpg" alt="news image"/>
-					<p class="text-center">Creating an entrepreneurial spirit inside the sometimes constraining confines of the academy can be a challenge, but it’s possible to create an agile and goal-driven team focused on transformation</p>
+					<p>Creating an entrepreneurial spirit inside the sometimes constraining confines of the academy can be a challenge, but it’s possible to create an agile and goal-driven team focused on transformation</p>
 				</div>
-				<div class="text-content text-center">
+				<div class="text-content">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sed tempore culpa ipsum, commodi atque illum possimus unde, harum doloremque quibusdam! Est accusamus facere debitis at enim possimus rerum error Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos neque ut, nihil provident similique quas minima ullam, possimus placeat, recusandae distinctio totam deserunt accusantium odio hic aliquid labore aut cupiditate?</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sed tempore culpa ipsum, commodi atque illum possimus unde, harum doloremque quibusdam! Est accusamus facere debitis at enim possimus rerum error Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos neque ut, nihil provident similique quas minima ullam, possimus placeat, recusandae distinctio totam deserunt accusantium odio hic aliquid labore aut cupiditate?</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae sed tempore culpa ipsum, commodi atque illum possimus unde, harum doloremque quibusdam! Est accusamus facere debitis at enim possimus rerum error Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos neque ut, nihil provident similique quas minima ullam, possimus placeat, recusandae distinctio totam deserunt accusantium odio hic aliquid labore aut cupiditate?</p>
@@ -67,7 +68,7 @@
 							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur dicta nam </a>
 						</div>
 						<div class="author">
-							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla</a>
+							<a href="#"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla </span></a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +83,7 @@
 							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur dicta nam </a>
 						</div>
 						<div class="author">
-							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla</a>
+							<a href="#"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla </span></a>
 						</div>
 					</div>
 				</div>
@@ -97,7 +98,7 @@
 							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur dicta nam </a>
 						</div>
 						<div class="author">
-							<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla</a>
+							<a href="#"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae incidunt unde fuga doloremque eligendi, architecto nulla </span></a>
 						</div>
 					</div>
 				</div>
