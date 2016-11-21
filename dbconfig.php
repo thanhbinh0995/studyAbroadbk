@@ -5,7 +5,7 @@ session_start();
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "binh";
-$DB_name = "dblogin";
+$DB_name = "StudyAbroad";
 
 try
 {

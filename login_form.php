@@ -13,7 +13,7 @@
 
     if($user->login($uname,$umail,$upass))
     {
-      $user->redirect('home.php');
+      $user->redirect('index.php');
     }
     else
     {
@@ -28,7 +28,7 @@
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item">Login</li>
+            <li class="breadcrumb-item">Login</li>
         </ol>
       </div>
     </div>
@@ -36,14 +36,14 @@
       <div class="clearfix"><br/></div>
       <div class="main-content container">
         <form method="post" class="form-horizontal">
-                    <?php
-                    if(isset($error))
-                    {
-                    ?>
-                        <div class="alert alert-danger">
-                            <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-                        </div>
-                    <?php } ?>
+              <?php
+              if(isset($error))
+              {
+              ?>
+                  <div class="alert alert-danger">
+                      <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+                  </div>
+              <?php } ?>
             <div class="form-group">
               <label class="col-lg-2" for="Name">Username</label>
               <div class="col-sm-5">

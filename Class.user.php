@@ -14,7 +14,7 @@ class USER
        {
            $new_password = password_hash($upass, PASSWORD_DEFAULT);
    
-           $stmt = $this->db->prepare("INSERT INTO users(user_name,user_email,user_pass) 
+           $stmt = $this->db->prepare("INSERT INTO user (user_name,user_email,user_pass) 
                                                        VALUES(:uname, :umail, :upass)");
               
            $stmt->bindparam(":uname", $uname);
@@ -34,12 +34,12 @@ class USER
     {
        try
        {
-          $stmt = $this->db->prepare("SELECT * FROM users WHERE user_name=:uname OR user_email=:umail LIMIT 1");
+          $stmt = $this->db->prepare("SELECT * FROM user WHERE Name=:uname OR Email=:umail LIMIT 1");
           $stmt->execute(array(':uname'=>$uname, ':umail'=>$umail));
           $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
           if($stmt->rowCount() > 0)
           {
-             if(password_verify($upass, $userRow['user_pass']))
+             if(password_verify($upass, $userRow['Pass']))
              {
                 $_SESSION['user_session'] = $userRow['user_id'];
                 return true;
