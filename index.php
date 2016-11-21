@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Demo</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn	.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/home.css">
-</head>
-<body>
-<div id="wrapper">
-	<header id="header" class="header">
-		<nav class="navbar">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<div class="logo">
-						<a href="" class="navbar-brand">
-							<img class="img-responsive" src="img/logo.png" alt="" />
-						</a>
-					</div>
-				</div>
-				<div id="navbar" class=" nav navbar-nav navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="news-page.html">News</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="register_form.html">Register</a></li>
-						<li><a href="login_form.html">Login</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+
+<?php $title = 'Home'; ?>
+
+<?php include 'header.php'; ?>
 	<section id="slider" class="slider">
 		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<ol class="carousel-indicators">
@@ -50,7 +11,7 @@
 			    </ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active single-slider">
-					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -60,7 +21,7 @@
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -70,7 +31,7 @@
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -90,79 +51,6 @@
 			</a>
 		</div>
 	</section>
-<!-- 	<section class="banner">
-		<div class="container">
-			<div class="col-lg-6 col-md-6">
-				<div class="logo">
-					<img src="" alt="">
-				</div>
-			</div>
-			<div class="col-lg-6 col-md-6">
-				<div class="menu">
-					<ul>
-						<li><a href="">HOME</a></li>
-						<li><a href="">ABOUT</a></li>
-						<li><a href="">NEWS</a></li>
-						<li><a href="">SERVICES</a></li>
-						<li><a href="">BLOG</a></li>
-						<li><a href="">CONTACTS</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div id="myCarousel1" class="carousel slide" data-ride="carousel">								
-			    <ol class="carousel-indicators">
-			      <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
-			      <li data-target="#myCarousel1" data-slide-to="1"></li>
-			      <li data-target="#myCarousel1" data-slide-to="2"></li>
-			      <li data-target="#myCarousel1" data-slide-to="3"></li>
-			    </ol>
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-					    <img src="img/slide1.jpg" alt="Chania" class="slides img-responsive">
-					    <div class="carousel-caption" id="banner-caption">
-							<h3>RETAIN</h3>
-							<div class="banner-content">
-								<p>Our single-minded focus is our students.</p>
-								<p>Enrolling the best and brightest.</p>
-							</div>
-					    </div>
-					</div>
-					<div class="item ">
-					    <img src="img/slide2.jpg" alt="Chania" class="slides" >
-					    <div class="carousel-caption" id="banner-caption">
-							<h3>RETAIN</h3>
-							<div class="banner-content">
-								<p>Our single-minded focus is our students.</p>
-								<p>Enrolling the best and brightest.</p>
-							</div>
-					    </div>
-					</div>
-					<div class="item ">
-					    <img src="img/slide3.jpg" alt="Chania" class="slides">
-					    <div class="carousel-caption " id="banner-caption">
-							<h3>RETAIN</h3>
-							<div class="banner-content">
-								<p>Our single-minded focus is our students.</p>
-								<p>Enrolling the best and brightest.</p>
-							</div>
-					    </div>
-					</div>
-					<div class="item ">
-					    <img src="img/slide4.jpg" alt="Chania" class="slides">
-					    <div class="carousel-caption" id="banner-caption">
-							<h3>RETAIN</h3>
-							<div class="banner-content">
-								<p>Our single-minded focus is our students.</p>
-								<p>Enrolling the best and brightest.</p>
-							</div>	
-					    </div>
-					</div>
-				</div> 
-			</div>	
-		</div>
-	</section> -->
 
 	<section class="spot">
 		<div class="container">
@@ -426,101 +314,4 @@
 		</div>
 	</section>
 
-	<footer class="footer">
-       
-        <div class=" footer-link container">
-            <div class="col-lg-3 col-md-3">
-
-                <h2>Contact</h2>
-
-                <div class="content">
-                    <p>Administration Building, Room 401
-                        <br /> The University of Arizona
-                        <br /> Tucson, AZ USA 85721-0066
-                        <br /> Phone: 520-621-3772
-                        <br /> Fax: 520-621-3776</p>
-                </div>
-            </div>
-            <div  class="col-lg-3 col-md-3">
-                <h2>Areas</h2>
-                <div class="content">
-                    <ul class="menu">
-                        <li class="first leaf"><a href="senior-vice-president-senior-vice-provost/message-senior-vice-president-and-senior-vice-provost.html">Senior Vice President &amp; Senior Vice Provost</a>
-                        </li>
-                        <li class="leaf"><a href="student-affairs.html">Student Affairs</a>
-                        </li>
-                        <li class="leaf"><a href="enrollment-management.html">Enrollment Management</a>
-                        </li>
-                        <li class="leaf"><a href="academic-initiatives.html">Academic Initiatives</a>
-                        </li>
-                        <li class="last leaf"><a href="student-success.html">Student Success</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <h2>Quick Links</h2>
-                <div class="content">
-                    <ul class="menu">
-                        <li class="first leaf"><a href="uafinalssurvival.html">Finals Survival</a>
-                        </li>
-                        <li class="leaf"><a href="senior-vice-president-senior-vice-provost/policy-interactions-non-enrolled-minors.html">Minor Policy</a>
-                        </li>
-                        <li class="leaf"><a href="student-affairs/student-fees.html">Student Fees</a>
-                        </li>
-                        <li class="leaf"><a href="http://www.arizona.edu/apply">Apply</a>
-                        </li>
-                        <li class="last leaf"><a href="https://webauth.arizona.edu/webauth/login?service=http%3A%2F%2Fsaem-aiss.arizona.edu%2Fcas%3Fdestination%3Dnode%2F690" class="restricted">UA Online Co-Branding Resources</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3" id = "social-icon">
-
-                <h2>Follow Us</h2>
-
-                <div class="content" >
-                    <ul >
-                        <li>
-                            <a href="http://www.facebook.com/uasaem" style="padding: 8px 14px 8px 14px;">
-                            	<i class="fa fa-facebook"  style="height:31px; " ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com/UA_SAEM_AISS" style="padding: 8px 9px 8px 11px;">
-                             	<i class="fa fa-twitter"  style="height:31px; " ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/ua_saem_aiss" style="padding: 8px 10px 8px 11px;">
-                            	<i class="fa fa-instagram"  style="height:31px; 	" ></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <p><a class="blue-button" href="https://www.uafoundation.org/NetCommunity/donations/student-affairs-and-enrollment-management">Donate Now</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-      
-        <div class="footertext container">
-            <div class="region region-footer-text">
-                <div id="block-block-1" class="block block-block">
-                    <div class="content">
-                        <p>Copyright 2016 | Arizona Board of Regents</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-<!--         <div class="footer-logo">
-        	<img src="img/uamenu.png" alt="">
-        </div> -->
-    </footer>
-</div>	
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+	<?php include 'footer.php'; ?>

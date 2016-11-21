@@ -1,82 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LOGIN</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/news.css">
-</head>
-<body>
-<div id="wrapper">
-	<header id="header" class="header">
-		<nav class="navbar navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header ">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<div class="logo">
-						<a href="" class="navbar-brand">
-							<img class="img-responsive" src="img/logo.png" alt="" />
-						</a>
-					</div>
-				</div>
-				<div id="navbar" class=" nav navbar-nav navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="news-page.html">News</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="register_form.html">Register</a></li>
-						<li class="active"><a href="#">Login</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<section id="main-content">
-		<div class="top-title">
-			<div class="container">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-				</ol>
-			</div>
-		</div>
-		<div class="container">
-			<div class="clearfix"><br/></div>
-			<div class="main-content container">
-				<form id="signupForm" method="post" class="form-horizontal" action="">
-				<div class="form-group">
-					<label class="col-lg-2" for="email">Email</label>
-					<div class="col-sm-5">
-						<input type="email" id="email" class="form-control" name="email" placeholder="Email" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-lg-2" for="pass">Password</label>
-					<div class="col-sm-5">
-						<input type="password" id="pass" class="form-control" name="pass" placeholder="your password" />
-					</div>
-				</div>
-				<input type="submit" name="submit" value="LOGIN"> <br/> <br/>
-			</form>
-			</div>
-		</div>
-	</section>
+
 	<footer class="footer">
+       
         <div class=" footer-link container">
             <div class="col-lg-3 col-md-3">
 
@@ -84,10 +8,10 @@
 
                 <div class="content">
                     <p>Administration Building, Room 401
-                        <br/> The University of Arizona
-                        <br/> Tucson, AZ USA 85721-0066
-                        <br/> Phone: 520-621-3772
-                        <br/> Fax: 520-621-3776</p>
+                    <br/> The University of Arizona
+                    <br/> Tucson, AZ USA 85721-0066
+                    <br/> Phone: 520-621-3772
+                    <br/> Fax: 520-621-3776</p>
                 </div>
             </div>
             <div  class="col-lg-3 col-md-3">
@@ -162,18 +86,11 @@
                 </div>
             </div>
         </div>
-<!--         
-        <div class="footer-logo">
-        	<img src="img/uamenu.png" alt="">
-        </div> -->
+        
     </footer>
-</div>
-	<script src="js/bootstrap.min.js"></script>
+</div>  
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/form_validation.js"></script>
-	<script type="text/javascript" src="js/intlTelInput.min.js"></script>
 </body>
 </html>

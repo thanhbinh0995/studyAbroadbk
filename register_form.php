@@ -1,27 +1,9 @@
-<!DOCTYPE html>
+<?php $title ='Register';?>
 <?php
 session_start();
 ?>
-  <html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>REGISTER</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/news.css">
-  </head>
-
-  <body>
-    <?php
+<?php include 'header.php'; ?>
+<?php
 
 $name=$fname=$lname=$email=$pass=$year=$phone=$nameErr="";
 $check = 0;
@@ -72,42 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-      <div id="wrapper">
-        <header id="header" class="header">
-          <nav class="navbar navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header ">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <div class="logo">
-                  <a href="" class="navbar-brand">
-                    <img class="img-responsive" src="img/logo.png" alt="" />
-                  </a>
-                </div>
-              </div>
-              <div id="navbar" class=" nav navbar-nav navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="news-page.html">News</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li class="active"><a href="#">Register</a></li>
-                  <li><a href="login_form.html">Login</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
         <section id="main-content">
           <div class="top-title">
             <div class="container">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Register</li>
               </ol>
             </div>
           </div>
@@ -187,6 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <footer class="footer">
           <div class=" footer-link container">
             <div class="col-lg-3 col-md-3">
@@ -291,3 +244,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </body>
 
   </html>
+=======
+<?php include 'footer.php'; ?>
+>>>>>>> c7b857cdbd3f9b69f361b7923869b4e9cc29ce07
