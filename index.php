@@ -2,7 +2,6 @@
 <?php $title = 'Home'; ?>
 
 <?php include 'header.php'; ?>
-welcome : <?php print($userRow['user_name']); ?>
 	<section id="slider" class="slider">
 		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<ol class="carousel-indicators">
@@ -12,7 +11,7 @@ welcome : <?php print($userRow['user_name']); ?>
 			    </ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active single-slider">
-					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide1.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -22,7 +21,7 @@ welcome : <?php print($userRow['user_name']); ?>
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide2.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
@@ -32,7 +31,7 @@ welcome : <?php print($userRow['user_name']); ?>
 					</div>
 				</div>
 				<div class="item single-slider">
-					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive">
+					<img src="img/slide3.jpg" alt="Chania" class=" img-responsive img-100">
 					<div class="carousel-caption">
 						<h3>RETAIN</h3>
 						<div class="banner-content">
