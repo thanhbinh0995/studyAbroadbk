@@ -41,6 +41,9 @@ jQuery(document).ready(function($) {
 				required: true,
 				matches1: true
 			},
+			check:{
+				required : true
+			}
 		},
 		messages: {
 			firstname: {
@@ -79,43 +82,11 @@ jQuery(document).ready(function($) {
 			phoneNumber:{
 				required: "Vui lòng nhập vào đây",
 				matches1: "nhap dung so dien thoai"
-			}
+			},
+			check:{
+				required: "Tick OK if you finish your information"
+			},
 		},
 		
 	});
-
-	$('#signupForm')
-        .find('[name="phoneNumber"]')
-            .intlTelInput({
-                utilsScript: '/vendor/intl-tel-input/lib/libphonenumber/build/utils.js',
-                autoPlaceholder: true,
-                preferredCountries: ['fr', 'us', 'gb']
-            });
-
-    $('#signupForm')
-        .formValidation({
-            framework: 'bootstrap',
-            icon: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-            fields: {
-                phoneNumber: {
-                    validators: {
-                        callback: {
-                            message: 'The phone number is not valid',
-                            callback: function(value, validator, $field) {
-                                return value === '' || $field.intlTelInput('isValidNumber');
-                            }
-                        }
-                    }
-                }
-            }
-        })
-        // Revalidate the number when changing the country
-        .on('click', '.country-list', function() {
-            $('#signupForm').formValidation('revalidateField', 'phoneNumber');
-        });
-	
-});
+	});

@@ -13,8 +13,7 @@ class USER
     {
        try
        {
-           $new_password = password_hash($pass, PASSWORD_DEFAULT);
-   
+           $pass = md5($pass);
            $stmt = $this->db->prepare("INSERT INTO user  (Name, Email, Pass,FirstName,LastName,YearOld,PhoneNumber)
                                                        VALUES(:name, :email, :pass,:fname,:lname,:year,:phone)");
               
@@ -25,6 +24,30 @@ class USER
            $stmt->bindparam(":pass", $pass); 
            $stmt->bindparam(":year", $year); 
            $stmt->bindparam(":phone", $phone); 
+
+           $stmt->execute(); 
+   
+           return $stmt; 
+       }
+       catch(PDOException $e)
+       {
+           echo $e->getMessage();
+       }    
+    }
+    public function contact($name,$from,$to,$startYear,$numYear,$country,$opinion)
+    {
+       try
+       {
+           $stmt = $this->db->prepare("INSERT INTO sinhvien  (Name, AidFrom, AidTo,StartYear,NumberOfYear,Country,Opinion)
+                                                       VALUES(:name, :afrom , :ato,:startYear,:numYear,:country,:opinion)");
+              
+           $stmt->bindparam(":name", $name);
+           $stmt->bindparam(":afrom", $from);          
+           $stmt->bindparam(":ato", $to); 
+           $stmt->bindparam(":startYear", $startYear); 
+           $stmt->bindparam(":numYear", $numYear); 
+           $stmt->bindparam(":country", $country); 
+           $stmt->bindparam(":opinion", $opinion); 
 
            $stmt->execute(); 
    
@@ -62,13 +85,13 @@ class USER
 //        }
 //    }
  
-//    public function is_loggedin()
-//    {
-//       if(isset($_SESSION['user_session']))
-//       {
-//          return true;
-//       }
-//    }
+   public function is_loggedin()
+   {
+      if(isset($_SESSION['user_session']))
+      {
+         return true;
+      }
+   }
  
 //    public function redirect($url)
 //    {

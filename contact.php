@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -17,6 +20,27 @@
 	<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+<?php
+	include('connect.php');
+	// if(!$user->is_loggedin()){
+	// 	header("Location: home.html");
+	// }
+	if ($_SERVER["REQUEST_METHOD"] == "POST"){
+		$from = $_POST["aidFrom"];
+		$to = $_POST["aidTo"];
+		$startYear = $_POST["startYear"];
+		$numYear = $_POST["numYear"];
+		$country = $_POST["country"];
+		$opinion = $_POST["opinion"];
+		$name = $_SESSION['user_session'];
+		if($user->contact($name,$from,$to,$startYear,$numYear,$country,$opinion)){
+			header('Location: contactsuccess.php');
+		}
+		else{
+			  header('Location: index.php');
+		}
+	}
+?>
 <div id="wrapper">
 	<header id="header" class="header">
 		<nav class="navbar navbar-fixed-top">
@@ -79,13 +103,13 @@
 				<div class="form-group">
 					<label class="col-lg-2" for="date">StartDate</label>
 					<div class="col-sm-5">
-						<input type="text" class="date form-control" name="date" placeholder="start date" /><br/>
+						<input type="text" class="date form-control" name="startYear" placeholder="start date" /><br/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-lg-2" for="date">Number Of Year</label>
 					<div class="col-sm-5">
-						<input type="text" class="date form-control" name="date" placeholder="Number of year" /><br/>
+						<input type="text" class="date form-control" name="numYear" placeholder="Number of year" /><br/>
 					</div>
 				</div>
 				<div class="form-group">

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $email = $_POST['email'];
-    $pass = password_hash($_POST['pass']);
+    $pass = $_POST['pass'];
     $year = $_POST['year'];
     $phone = $_POST['phoneNumber'];
     include('connect.php');
@@ -63,7 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($check==0){
         if($user->register($fname,$lname,$name,$email,$pass,$phone,$year))
         {
-            header('Location: /studyAbroadbk/sign-up-succes.php');
+            $_SESSION['user_session'] = $name;
+            header('Location: signupsuccess.php');
+        }
+        else {
+            header('Location: index.php');
         }
     }
 }
@@ -170,7 +174,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Comfirm</label>
+                    <input type="checkbox" name="check"> <span style="font-weight:bold;"> Comfirm </span>
+                    <br>
+                  </label>
                   <br/>
                   <br/>
                 </div>
@@ -256,8 +262,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
             </div>
           </div>
-
-
           <div class="footertext container">
             <div class="region region-footer-text">
               <div id="block-block-1" class="block block-block">
@@ -267,19 +271,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
             </div>
           </div>
-          <!--
-<div class="footer-logo">
-<img src="img/uamenu.png" alt="">
-</div> -->
+        
         </footer>
       </div>
+      <script src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
       <script src="js/main.js"></script>
       <script type="text/javascript" src="js/jquery.validate.min.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/form_validation.js"></script>
       <script type="text/javascript" src="js/intlTelInput.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script>
+        $.validator.addMethod('matches1', function(phoneNumber, element) {
+          phoneNumber = phoneNumber.replace(/\s+/g, '');
+          return this.optional(element) || phoneNumber.length == 10 || phoneNumber.length == 11 && phoneNumber.match(/^\d+$/);
+        }, "nhap dung so dien thoai");
+      </script>
+
   </body>
 
   </html>
