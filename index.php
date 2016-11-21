@@ -1,46 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn	.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/home.css">
-</head>
-<body>
-<div id="wrapper">
-	<header id="header" class="header">
-		<nav class="navbar">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<div class="logo">
-						<a href="" class="navbar-brand">
-							<img class="img-responsive" src="img/logo.png" alt="" />
-						</a>
-					</div>
-				</div>
-				<div id="navbar" class=" nav navbar-nav navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="news-page.html">News</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="login_form.html">Login</a></li>
-						<li><a href="register_form.html">Register</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+<?php $title = 'Home' ?>
+<?php
+include_once 'connect.php';
+if(!$user->is_loggedin())
+{
+ 	$user->redirect('index.php');
+}
+$user_id = $_SESSION['user_session'];
+$stmt = $DB_con->prepare("SELECT * FROM user WHERE id=:user_id");
+$stmt->execute(array(":user_id"=>$user_id));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+?>
+<?php include 'header.php'; ?>
+welcome : <?php print($userRow['user_name']); ?>
 	<section id="slider" class="slider">
 		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<ol class="carousel-indicators">
@@ -339,99 +310,4 @@
 			</div>	
 		</div>
 	</section>
-
-	<footer class="footer">
-       
-        <div class=" footer-link container">
-            <div class="col-lg-3 col-md-3">
-
-                <h2>Contact</h2>
-
-                <div class="content">
-                    <p>Administration Building, Room 401
-                    <br/> The University of Arizona
-                    <br/> Tucson, AZ USA 85721-0066
-                    <br/> Phone: 520-621-3772
-                    <br/> Fax: 520-621-3776</p>
-                </div>
-            </div>
-            <div  class="col-lg-3 col-md-3">
-                <h2>Areas</h2>
-                <div class="content">
-                    <ul class="menu">
-                        <li class="first leaf"><a href="senior-vice-president-senior-vice-provost/message-senior-vice-president-and-senior-vice-provost.html">Senior Vice President &amp; Senior Vice Provost</a>
-                        </li>
-                        <li class="leaf"><a href="student-affairs.html">Student Affairs</a>
-                        </li>
-                        <li class="leaf"><a href="enrollment-management.html">Enrollment Management</a>
-                        </li>
-                        <li class="leaf"><a href="academic-initiatives.html">Academic Initiatives</a>
-                        </li>
-                        <li class="last leaf"><a href="student-success.html">Student Success</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <h2>Quick Links</h2>
-                <div class="content">
-                    <ul class="menu">
-                        <li class="first leaf"><a href="uafinalssurvival.html">Finals Survival</a>
-                        </li>
-                        <li class="leaf"><a href="senior-vice-president-senior-vice-provost/policy-interactions-non-enrolled-minors.html">Minor Policy</a>
-                        </li>
-                        <li class="leaf"><a href="student-affairs/student-fees.html">Student Fees</a>
-                        </li>
-                        <li class="leaf"><a href="http://www.arizona.edu/apply">Apply</a>
-                        </li>
-                        <li class="last leaf"><a href="https://webauth.arizona.edu/webauth/login?service=http%3A%2F%2Fsaem-aiss.arizona.edu%2Fcas%3Fdestination%3Dnode%2F690" class="restricted">UA Online Co-Branding Resources</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3" id = "social-icon">
-
-                <h2>Follow Us</h2>
-
-                <div class="content" >
-                    <ul >
-                        <li>
-                            <a href="http://www.facebook.com/uasaem" style="padding: 8px 14px 8px 14px;">
-                            	<i class="fa fa-facebook"  style="height:31px; " ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com/UA_SAEM_AISS" style="padding: 8px 9px 8px 11px;">
-                             	<i class="fa fa-twitter"  style="height:31px; " ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/ua_saem_aiss" style="padding: 8px 10px 8px 11px;">
-                            	<i class="fa fa-instagram"  style="height:31px; 	" ></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <p><a class="blue-button" href="https://www.uafoundation.org/NetCommunity/donations/student-affairs-and-enrollment-management">Donate Now</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-      
-        <div class="footertext container">
-            <div class="region region-footer-text">
-                <div id="block-block-1" class="block block-block">
-                    <div class="content">
-                        <p>Copyright 2016 | Arizona Board of Regents</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </footer>
-</div>	
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+	<?php include 'footer.php'; ?>
